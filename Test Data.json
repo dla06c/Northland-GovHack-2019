@@ -1,4 +1,4 @@
-[
+{ "Cars": 
   {
     "School Names": "WBHS",
     "Roll": 1212,
@@ -39,4 +39,4 @@
     "Longitude": 172,
     "Decile": 3
 }
-]
+}
