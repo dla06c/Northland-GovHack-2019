@@ -1,4 +1,5 @@
-[
+eqfeed_callback(
+    [
   {
     "": 1,
     "Org_Name": "Ahipara School",
@@ -7315,3 +7316,4 @@
     "%All_rate": 99.2
   }
 ]
+)
