@@ -1,7 +1,7 @@
 eqfeed_callback(
 [
   {
-    "School Names": "WBHS",
+    "SchoolNames": "WBHS",
     "Roll": 1212,
     "Enrolled @ Dental Clinics": 506,
     "Latitude": -35.75,
@@ -9,7 +9,7 @@ eqfeed_callback(
     "Decile": 5
   },
   {
-    "School Names": "WGHS",
+    "SchoolNames": "WGHS",
     "Roll": 1502,
     "Enrolled @ Dental Clinics": 1216,
     "Latitude": -35.8,
@@ -17,7 +17,7 @@ eqfeed_callback(
     "Decile": 5
   },
   {
-    "School Names": "KHS",
+    "SchoolNames": "KHS",
     "Roll": 517,
     "Enrolled @ Dental Clinics": 2530,
     "Latitude": -33.56,
@@ -25,7 +25,7 @@ eqfeed_callback(
     "Decile": 4
   },
   {
-    "School Names": "Huanui",
+    "SchoolNames": "Huanui",
     "Roll": 308,
     "Enrolled @ Dental Clinics": 5,
     "Latitude": -33.32,
@@ -33,7 +33,7 @@ eqfeed_callback(
     "Decile": 9
   },
   {
-    "School Names": "Tiki",
+    "SchoolNames": "Tiki",
     "Roll": 2307,
     "Enrolled @ Dental Clinics": 1583,
     "Latitude": -35.9,
