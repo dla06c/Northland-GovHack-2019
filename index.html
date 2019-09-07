@@ -39,18 +39,19 @@
 
       // Loop through the results array and place a marker for each
       // set of coordinates.
-      
-      window.eqfeed_callback = function(results) {
-        for (var i = 0; i < results.length; i++) {
-          var Latitude = results[i].Latitude;
-          var Longitude = results[i].Longitude;
-          var latLng = new google.maps.LatLng(Latitude,Longitude);
-          var marker = new google.maps.Marker({
-            position: latLng,
-            map: map
-          });
-        }
-      }
+
+      // window.eqfeed_callback = function(results) {
+      //   for (var i = 0; i < results.length; i++) {
+      //     var Latitude = results[i].Latitude;
+      //     var Longitude = results[i].Longitude;
+      //     var latLng = new google.maps.LatLng(Latitude,Longitude);
+      //     var marker = new google.maps.Marker({
+      //       position: latLng,
+      //       map: map
+      //     });
+      //   }
+      // }
+      console.log(results)
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVh2GtXct2lwsyjmP7ZyZleO4IueULqO4&callback=initMap">
