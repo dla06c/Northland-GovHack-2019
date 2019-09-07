@@ -36,15 +36,7 @@
         script.src = 'Real Data V3.json';
         document.getElementsByTagName('head')[0].appendChild(script);
         console.log("Feature:");
-        map.data.setStyle(function(feature) {
-          console.log("Feature: ",feature);
-          var Size = feature.Total;
-          console.log("Roll: ",Size);
-          
-          return {
-            icon: getCircle(Size)
-          };
-        });
+
         
       }
 
@@ -70,10 +62,19 @@
           var SchoolNames = results[i].Org_Name
           var Longitude = results[i].Longitude;
           console.log(SchoolNames,Latitude,Longitude);
+          map.data.setStyle(function(feature) {
+            console.log("Feature: ",feature);
+            var Size = feature.Total;
+            console.log("Roll: ",Size);
+            return {
+              icon: getCircle(Size)
+          };
+        });
           var latLng = new google.maps.LatLng(Latitude,Longitude);
           var marker = new google.maps.Marker({
             position: latLng,
             map: map
+
           });
         }
       }
