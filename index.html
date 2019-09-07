@@ -41,18 +41,22 @@
 
       // Loop through the results array and place a marker for each
       // set of coordinates.
-      console.log("test");
+      console.log(window.eqfeed_callback);
       window.eqfeed_callback = function(results) {
+        console.log(results);
         console.log(results.length);
-      //   for (var i = 0; i < results.length; i++) {
-      //     var Latitude = results[i].Latitude;
-      //     var Longitude = results[i].Longitude;
-      //     var latLng = new google.maps.LatLng(Latitude,Longitude);
-      //     var marker = new google.maps.Marker({
-      //       position: latLng,
-      //       map: map
-      //     });
-      //   }
+        for (var i = 0; i < results.length; i++) {
+          var Latitude = results[i].Latitude;
+          console.log(Latitude);
+          var Longitude = results[i].Longitude;
+          console.log(Longitude);
+          console.log(results);
+          var latLng = new google.maps.LatLng(Latitude,Longitude);
+          var marker = new google.maps.Marker({
+            position: latLng,
+            map: map
+          });
+        }
       }
       
     </script>
