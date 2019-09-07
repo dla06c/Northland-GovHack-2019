@@ -1,4 +1,4 @@
-var data[
+eqfeed_callback(
   {
     "School Names": "WBHS",
     "Roll": 1212,
@@ -39,4 +39,4 @@ var data[
     "Longitude": 172,
     "Decile": 3
   }
-]
+)
