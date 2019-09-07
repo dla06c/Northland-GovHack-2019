@@ -6,17 +6,17 @@
 </head>
 
 <body>
-
 <p id="demo"></p>
 
 <script>
-var myObj, x, txt = "";
-var obj = { table: "placeholder", limit: 20 };
-var dbParam = JSON.stringify(obj);
+var x, txt = "";
+/var obj = { table: "placeholder", limit: 20 };
+var dbParam = JSON.stringify(obj);/
 var xmlhttp = new XMLHttpRequest();
+var myObj = JSON.parse(href="Test Data.json");
+
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
-    myObj = JSON.parse(href="Test Data.json");
     txt += "<table border='1'>";
     for (x in myObj) {
       txt += "<tr><td>" + myObj[x].Schools.School Names + "</td></tr>";
