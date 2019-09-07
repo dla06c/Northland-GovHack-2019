@@ -43,10 +43,13 @@
       // set of coordinates.
       console.log("test");
       window.eqfeed_callback = function(results) {
+        console.log(results);
         console.log(results.length);
         for (var i = 0; i < results.length; i++) {
           var Latitude = results[i].Latitude;
+          console.log(Latitude);
           var Longitude = results[i].Longitude;
+          console.log(Longitude);
           console.log(results);
           var latLng = new google.maps.LatLng(Latitude,Longitude);
           var marker = new google.maps.Marker({
