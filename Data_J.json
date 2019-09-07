@@ -1,4 +1,5 @@
 eqfeed_callback(
+{
   {
     "School Names": "WBHS",
     "Roll": 1212,
@@ -38,5 +39,6 @@ eqfeed_callback(
     "Latitude": -35.9,
     "Longitude": 172,
     "Decile": 3
+  }
 }
 )
