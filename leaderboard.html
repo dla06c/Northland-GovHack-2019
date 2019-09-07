@@ -9,11 +9,23 @@
 <p id="demo"></p>
 
 <script>
-var x, txt = "";
 var xmlhttp = new XMLHttpRequest();
-var myObj = JSON.parse(href="Test Data.json");
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+    document.getElementById("demo").innerHTML = myObj.name;
+  }
+};
+xmlhttp.open("GET", "Test Data.json", true);
+xmlhttp.send();
+</script>
 
- 
+<!--
+<script>
+var x, txt = "";
+var myObj = JSON.parse(href="Test Data.json");
+var xmlhttp = new XMLHttpRequest();
+
 txt += "<table border='1'>";
 for (x in myObj) {
   txt += "<tr><td>" + myObj[x].Schools.School Names + "</td></tr>";
@@ -21,5 +33,6 @@ for (x in myObj) {
 txt += "</table>";   
 document.getElementById("demo").innerHTML = txt;
 </script>
+-->
 </body>
 </html>
