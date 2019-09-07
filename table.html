@@ -11,16 +11,38 @@
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.css">
   </head>
   <body>
+    <div class="card text-center">
+      <div class="card-header" style="font-size: 15px">Title
+        <ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">School Map</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="table.html">Info Table</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="links.html">Enroll Now</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
     <table data-toggle="table"
     data-url="Table Data V4.json"
     data-pagination="true" 
-    data-search="true">
+    data-search="true"
+    data-classes="table table-borderd table-hover table-striped">
       <thead>
         <tr>
           <th data-field="Org_Name" data-sortable="true">School Name</th>
           <th data-field="All_rate" data-sortable="true">Rate Enrolled At dentist (%)</th>
           <th data-field="StudAll" data-sortable="true">School Roll</th>
-          <th data-field="Decile" data-sortable="true">Decile Rating</th>
           <th data-field="Add1_City" data-sortable="true">Region / City</th>
           <th data-field="Authority" data-sortable="true">School Autority</th>
         </tr>
