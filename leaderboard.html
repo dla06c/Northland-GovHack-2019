@@ -1,44 +1,34 @@
-<!DOCTYPE html>
 <html>
-
 <head>
-	<title>Leaderboard</title>
+    <title>Convert JSON file to Array using JavaScript</title>
 </head>
-
 <body>
+    <p>Showing data extracted from an External JSON file using XMLHttpRequest Object JavaScript</p>
 
-	<div id="mydiv"></div>
-
-	<script>
-	console.log("start");
-    const request = new XMLHttpRequest();
-     
-    request.open('GET', 'https://api.icndb.com/jokes/random');
-    request.send(); 
-    console.log("get");
-     
-    request.onload = () => {
-      if (request.status === 200) {
-        console.log("Success"); // So extract data from json and create table
-        
-        //Extracting data
-        var jokeid = JSON.parse(request.response).value.id;
-        var joke = JSON.parse(request.response).value.joke;
-        
-        //Creating table
-        var table="<table>";
-    	table+="<tr><td>Joke ID</td><td>Joke</td></tr>"; 
-    	table+="<tr><td>"+jokeid+"</td><td>"+joke+"</td></tr>";
-    	table+="</table>";
-     
-        //Showing the table inside table
-        document.getElementById("mydiv").innerHTML = table;   
-      } 
-    };
-     
-    request.onerror = () => {
-      console.log("error")
-    };
-	</script>
+    <div id="Table"></div>    
 </body>
+<script>
+    var oXHR = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+
+    function reportStatus() {
+        if (oXHR.readyState == 4)                   // Request completed.
+            showTheList(this.responseText);         // All set. Now show the data.
+    }
+
+    oXHR.onreadystatechange = reportStatus;
+    oXHR.open("GET", "Table Data V3.json", true);          // true = ASYNCHRONOUS REQUEST (DESIRABLE), false = SYNCHRONOUS REQUEST.
+    oXHR.send();
+
+    function showTheList(json) {
+        var arrItems = [];
+        arrItems = JSON.parse(json); 	// Fill JSON data to an array.
+
+        // Now you can use the data in the array for different purpose.
+        // I am simply showing the data on my web page using the <p> element.
+        for (i = 0; i <= arrItems.length - 1; i++) {
+            var p = document.getElementById('Table');
+            p.innerHTML = p.innerHTML + ' <br > ' + arrItems[i].Org_Name;
+        }
+    }
+</script>
 </html>
