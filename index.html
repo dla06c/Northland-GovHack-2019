@@ -37,7 +37,9 @@
         document.getElementsByTagName('head')[0].appendChild(script);
         console.log("Feature:");
 
-         map.data.setStyle({icon: getCircle(Size)});
+         map.data.setStyle(
+          getCircle(5)
+        );
         // map.data.setStyle(function(feature) {
         //   console.log("Feature: ",feature);
         //   var Size = feature.Total;
