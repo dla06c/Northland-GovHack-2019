@@ -69,10 +69,9 @@
         console.log(results.Latitude);
         for (var i = 0; i < results.length; i++) {
           var Latitude = results[i].Latitude;
-          console.log(Latitude);
+
           var Longitude = results[i].Longitude;
-          console.log(Longitude);
-          console.log(results);
+          console.log(Latitude,Longitude);
           var latLng = new google.maps.LatLng(Latitude,Longitude);
           var marker = new google.maps.Marker({
             position: latLng,
