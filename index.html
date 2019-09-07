@@ -101,8 +101,17 @@
               strokeWeight: .5
             }
           });
+
+
+          google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+                infoWindow.setContent(results[i].Org_Name);
+                infoWindow.open(map, marker);
+              }
+          })(marker, i));
         }
-      }
+      }  
+      
       
     </script>
     <script type="text/javascript">
