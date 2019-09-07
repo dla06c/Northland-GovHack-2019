@@ -4,10 +4,10 @@
 <p id="demo"></p>
 
 <script>
-var obj, dbParam, xmlhttp, myObj, x, txt = "";
-obj = { table: "placeholder", limit: 20 };
-dbParam = JSON.stringify(obj);
-xmlhttp = new XMLHttpRequest();
+var myObj, x, txt = "";
+var obj = { table: "placeholder", limit: 20 };
+var dbParam = JSON.stringify(obj);
+var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     myObj = JSON.parse(this.responseText);
