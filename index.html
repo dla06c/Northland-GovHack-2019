@@ -37,9 +37,10 @@
         document.getElementsByTagName('head')[0].appendChild(script);
         console.log("Feature:");
 
-         map.data.setStyle(
-          getCircle(5)
-        );
+        
+
+
+
         // map.data.setStyle(function(feature) {
         //   console.log("Feature: ",feature);
         //   var Size = feature.Total;
@@ -51,6 +52,7 @@
         // });
         
       }
+
 
 
       function getCircle(Size) {
@@ -74,10 +76,22 @@
           var SchoolNames = results[i].Org_Name
           var Longitude = results[i].Longitude;
           console.log(SchoolNames,Latitude,Longitude);
+
+          var Size = results[i].Total;
+          console.log("Roll: ",Size);
+          var Scale = Size / 150
           var latLng = new google.maps.LatLng(Latitude,Longitude);
           var marker = new google.maps.Marker({
             position: latLng,
-            map: map
+            map: map,
+            icon:{
+              path: google.maps.SymbolPath.CIRCLE,
+              fillColor: 'red',
+              fillOpacity: .5,
+              scale: Scale,
+              strokeColor: 'white',
+              strokeWeight: .5
+            }
           });
         }
       }
