@@ -1,4 +1,3 @@
-eqfeed_callback(
 [
   {
     "": 1,
@@ -7183,4 +7182,3 @@ eqfeed_callback(
     "S1418_Diff": 0
   }
 ]
-)
