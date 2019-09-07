@@ -34,7 +34,6 @@
         // This example uses a local copy of the GeoJSON stored at
         // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
         script.src = 'Data_J.json';
-        console.log(script.src);
         document.getElementsByTagName('head')[0].appendChild(script);
 
         map.data.setStyle(function(feature) {
@@ -65,8 +64,6 @@
       
       window.eqfeed_callback = function(results) {
 
-        console.log(results[1]);
-        console.log(results.Latitude);
         for (var i = 0; i < results.length; i++) {
           var Latitude = results[i].Latitude;
           var SchoolNames = results[i].SchoolNames
