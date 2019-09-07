@@ -36,7 +36,28 @@
         script.src = 'Data_J.json';
         console.log(script.src);
         document.getElementsByTagName('head')[0].appendChild(script);
+
+        map.data.setStyle(function(feature) {
+          console("Feature: ",feature)
+          console("Roll: ",feature.Roll)
+          var Size = feature.Roll;
+          return {
+            icon: getCircle(Size)
+          };
+        });
         
+      }
+
+
+      function getCircle(Size) {
+        return {
+          path: google.maps.SymbolPath.CIRCLE,
+          fillColor: 'red',
+          fillOpacity: .2,
+          scale: Math.pow(2, Size) / 2,
+          strokeColor: 'white',
+          strokeWeight: .5
+        };
       }
 
       // Loop through the results array and place a marker for each
