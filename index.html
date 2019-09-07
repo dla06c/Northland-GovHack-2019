@@ -87,10 +87,12 @@
 
       // Loop through the results array and place a marker for each
       // set of coordinates.
-      //var infoWindow = new google.maps.InfoWindow(), marker, i;
+
       
       window.eqfeed_callback = function(results) {
-
+        var infoWindow = new google.maps.InfoWindow({
+        content: "test"
+      })
         for (var i = 0; i < results.length; i++) {
           var Latitude = results[i].Latitude;
           var SchoolNames = results[i].Org_Name;
@@ -156,7 +158,10 @@
           google.maps.event.addListener(marker, 'click', (function(marker, i) {
             return function() {
                 console.log("Marker clicked", i)
-                infoWindow.setContent(results[i].Org_Name);
+                infoWindow.setContent(
+                  "<h3>"+results[i].Org_Name+"</h3><br><p>"+results[i].StudAll+"</p>"
+
+                  );
                 infoWindow.open(map, marker);
               }
           })(marker, i));
