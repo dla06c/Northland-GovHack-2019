@@ -38,8 +38,9 @@
         console.log("Feature:");
         map.data.setStyle(function(feature) {
           console.log("Feature: ",feature);
-          console.log("Roll: ",feature.Roll);
-          var Size = feature.Roll;
+          var Size = feature.Total;
+          console.log("Roll: ",Size);
+          
           return {
             icon: getCircle(Size)
           };
