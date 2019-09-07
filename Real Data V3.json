@@ -43,7 +43,7 @@ eqfeed_callback(
     "International": 0,
     "Children.enrolled": 10,
     "Freq": 22,
-    "En_rate": 0.454545455,
+    "En_rate": 50,
     "En_Diff": 12
   },
   {
@@ -89,7 +89,7 @@ eqfeed_callback(
     "International": 2,
     "Children.enrolled": 48,
     "Freq": 33,
-    "En_rate": 1.454545455,
+    "En_rate": 89,
     "En_Diff": -15
   },
   {
@@ -1331,7 +1331,7 @@ eqfeed_callback(
     "International": 6,
     "Children.enrolled": 73,
     "Freq": 27,
-    "En_rate": 2.703703704,
+    "En_rate": 60,
     "En_Diff": -46
   },
   {

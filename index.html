@@ -73,20 +73,25 @@
 
         for (var i = 0; i < results.length; i++) {
           var Latitude = results[i].Latitude;
-          var SchoolNames = results[i].Org_Name
+          var SchoolNames = results[i].Org_Name;
           var Longitude = results[i].Longitude;
           console.log(SchoolNames,Latitude,Longitude);
 
-          var Size = results[i].Total;
+          var Size = results[i].Total/1000;
           console.log("Roll: ",Size);
-          var Scale = Size / 150
+          var Scale = Math.pow(2, Size) ;
+          var PercentEnrolled = results[i].En_rate/100;
+          
+          var red = Math.round(255-(PercentEnrolled*255));
+          var green = Math.round(PercentEnrolled*255);
+          var rgbString = "rgb("+red.toString()+","+green.toString()+",0)";
           var latLng = new google.maps.LatLng(Latitude,Longitude);
           var marker = new google.maps.Marker({
             position: latLng,
             map: map,
             icon:{
               path: google.maps.SymbolPath.CIRCLE,
-              fillColor: 'rgb(0,255,0)',
+              fillColor: rgbString,
               fillOpacity: .5,
               scale: Scale,
               strokeColor: 'white',
