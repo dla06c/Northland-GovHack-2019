@@ -39,7 +39,8 @@
 
       // Loop through the results array and place a marker for each
       // set of coordinates.
-      window.eqfeed_callback = function(results) {
+      console.log(data)
+      window.data = function(results) {
         for (var i = 0; i < results.length; i++) {
           var Latitude = results[i].Latitude;
           var Longitude = results[i].Longitude;
