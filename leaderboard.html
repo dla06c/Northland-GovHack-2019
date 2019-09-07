@@ -8,10 +8,12 @@
 <body>
 
 	<script>
+	console.log("start");
     const request = new XMLHttpRequest();
      
     request.open('GET', 'https://api.icndb.com/jokes/random');
     request.send(); 
+    console.log("get");
      
     request.onload = () => {
       if (request.status === 200) {
