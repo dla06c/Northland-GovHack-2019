@@ -43,7 +43,7 @@
 "Freq": 22,
 "En_rate": 0.454545455,
 "En_Diff": 12
-}
+},
 {
 "": 2,
 "Org_Name": "Bream Bay College",
@@ -89,7 +89,7 @@
 "Freq": 33,
 "En_rate": 1.454545455,
 "En_Diff": -15
-}
+},
 {
 "": 3,
 "Org_Name": "Broadwood Area School",
@@ -135,7 +135,7 @@
 "Freq": 10,
 "En_rate": 1.8,
 "En_Diff": -8
-}
+},
 {
 "": 4,
 "Org_Name": "Christian Renewal School",
@@ -181,7 +181,7 @@
 "Freq": 21,
 "En_rate": 1.142857143,
 "En_Diff": -3
-}
+},
 {
 "": 5,
 "Org_Name": "Dargaville High School",
@@ -227,7 +227,7 @@
 "Freq": 32,
 "En_rate": 2.40625,
 "En_Diff": -45
-}
+},
 {
 "": 6,
 "Org_Name": "Huanui College",
@@ -273,7 +273,7 @@
 "Freq": 33,
 "En_rate": 0.848484848,
 "En_Diff": 5
-}
+},
 {
 "": 7,
 "Org_Name": "Kaitaia Abundant Life School",
@@ -319,7 +319,7 @@
 "Freq": 15,
 "En_rate": 3.666666667,
 "En_Diff": -40
-}
+},
 {
 "": 8,
 "Org_Name": "Kaitaia College",
@@ -365,7 +365,7 @@
 "Freq": 32,
 "En_rate": 10.03125,
 "En_Diff": -289
-}
+},
 {
 "": 9,
 "Org_Name": "Kamo High School",
@@ -411,7 +411,7 @@
 "Freq": 49,
 "En_rate": 1.836734694,
 "En_Diff": -41
-}
+},
 {
 "": 10,
 "Org_Name": "Kerikeri High School",
@@ -457,7 +457,7 @@
 "Freq": 48,
 "En_rate": 7.5625,
 "En_Diff": -315
-}
+},
 {
 "": 11,
 "Org_Name": "Mangakahia Area School",
@@ -503,7 +503,7 @@
 "Freq": 12,
 "En_rate": 1.75,
 "En_Diff": -9
-}
+},
 {
 "": 12,
 "Org_Name": "Northland College",
@@ -549,7 +549,7 @@
 "Freq": 22,
 "En_rate": 1.318181818,
 "En_Diff": -7
-}
+},
 {
 "": 13,
 "Org_Name": "Okaihau College",
@@ -595,7 +595,7 @@
 "Freq": 25,
 "En_rate": 1.04,
 "En_Diff": -1
-}
+},
 {
 "": 14,
 "Org_Name": "Opononi Area School",
@@ -641,7 +641,7 @@
 "Freq": 16,
 "En_rate": 2.3125,
 "En_Diff": -21
-}
+},
 {
 "": 15,
 "Org_Name": "Otamatea High School",
@@ -687,7 +687,7 @@
 "Freq": 29,
 "En_rate": 4.620689655,
 "En_Diff": -105
-}
+},
 {
 "": 16,
 "Org_Name": "Rodney College",
@@ -733,7 +733,7 @@
 "Freq": 38,
 "En_rate": 0.421052632,
 "En_Diff": 22
-}
+},
 {
 "": 17,
 "Org_Name": "Ruawai College",
@@ -779,7 +779,7 @@
 "Freq": 21,
 "En_rate": 2.19047619,
 "En_Diff": -25
-}
+},
 {
 "": 18,
 "Org_Name": "Springbank School",
@@ -825,7 +825,7 @@
 "Freq": 22,
 "En_rate": 1.409090909,
 "En_Diff": -9
-}
+},
 {
 "": 19,
 "Org_Name": "Taipa Area School",
@@ -871,7 +871,7 @@
 "Freq": 25,
 "En_rate": 4.04,
 "En_Diff": -76
-}
+},
 {
 "": 20,
 "Org_Name": "Tauraroa Area School",
@@ -917,7 +917,7 @@
 "Freq": 32,
 "En_rate": 2.5,
 "En_Diff": -48
-}
+},
 {
 "": 21,
 "Org_Name": "Te Rangi Aniwaniwa",
@@ -963,7 +963,7 @@
 "Freq": 8,
 "En_rate": 4,
 "En_Diff": -24
-}
+},
 {
 "": 22,
 "Org_Name": "Tikipunga High School",
@@ -1009,7 +1009,7 @@
 "Freq": 22,
 "En_rate": 2.318181818,
 "En_Diff": -29
-}
+},
 {
 "": 23,
 "Org_Name": "TKKM o Kaikohe",
@@ -1055,7 +1055,7 @@
 "Freq": 10,
 "En_rate": 5.5,
 "En_Diff": -45
-}
+},
 {
 "": 24,
 "Org_Name": "TKKM o Pukemiro",
@@ -1101,7 +1101,7 @@
 "Freq": 8,
 "En_rate": 4.75,
 "En_Diff": -30
-}
+},
 {
 "": 25,
 "Org_Name": "TKKM o Taumarere",
@@ -1147,7 +1147,7 @@
 "Freq": 6,
 "En_rate": 1.333333333,
 "En_Diff": -2
-}
+},
 {
 "": 26,
 "Org_Name": "TKKM o Te Rawhiti Roa",
@@ -1193,7 +1193,7 @@
 "Freq": 9,
 "En_rate": 4.444444444,
 "En_Diff": -31
-}
+},
 {
 "": 27,
 "Org_Name": "TKKM o Te Tonga o Hokianga",
@@ -1239,7 +1239,7 @@
 "Freq": 10,
 "En_rate": 3.4,
 "En_Diff": -24
-}
+},
 {
 "": 28,
 "Org_Name": "TKKM o Whangaroa",
@@ -1285,7 +1285,7 @@
 "Freq": 2,
 "En_rate": 5,
 "En_Diff": -8
-}
+},
 {
 "": 29,
 "Org_Name": "Whangarei Boys' High School",
@@ -1331,7 +1331,7 @@
 "Freq": 27,
 "En_rate": 2.703703704,
 "En_Diff": -46
-}
+},
 {
 "": 30,
 "Org_Name": "Whangarei Girls' High School",
@@ -1377,7 +1377,7 @@
 "Freq": 29,
 "En_rate": 2.655172414,
 "En_Diff": -48
-}
+},
 {
 "": 31,
 "Org_Name": "Whangaroa College",
