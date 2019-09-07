@@ -36,15 +36,17 @@
         script.src = 'Real Data V3.json';
         document.getElementsByTagName('head')[0].appendChild(script);
         console.log("Feature:");
-        map.data.setStyle(function(feature) {
-          console.log("Feature: ",feature);
-          var Size = feature.Total;
-          console.log("Roll: ",Size);
+
+         map.data.setStyle({icon: getCircle(Size)});
+        // map.data.setStyle(function(feature) {
+        //   console.log("Feature: ",feature);
+        //   var Size = feature.Total;
+        //   console.log("Roll: ",Size);
           
-          return {
-            icon: getCircle(Size)
-          };
-        });
+        //   {
+        //     icon: getCircle(Size)
+        //   };
+        // });
         
       }
 
