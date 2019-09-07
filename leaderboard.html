@@ -5,7 +5,7 @@
 <body>
     <p>Showing data extracted from an External JSON file using XMLHttpRequest Object JavaScript</p>
 
-    <p id="birds" style="font:12px Verdana;"></p>    
+    <div id="Table"></div>    
 </body>
 <script>
     var oXHR = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
@@ -26,7 +26,7 @@
         // Now you can use the data in the array for different purpose.
         // I am simply showing the data on my web page using the <p> element.
         for (i = 0; i <= arrItems.length - 1; i++) {
-            var p = document.getElementById('birds');
+            var p = document.getElementById('Table');
             p.innerHTML = p.innerHTML + ' <br > ' + arrItems[i].Org_Name;
         }
     }
