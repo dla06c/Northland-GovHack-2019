@@ -55,7 +55,7 @@
         script.src = 'Real Data V4.json';
         document.getElementsByTagName('head')[0].appendChild(script);
         console.log("Feature:");
-        var infoWindow = new google.maps.InfoWindow(), marker, i;
+
         
 
 
@@ -87,7 +87,7 @@
 
       // Loop through the results array and place a marker for each
       // set of coordinates.
-      
+      //var infoWindow = new google.maps.InfoWindow(), marker, i;
       
       window.eqfeed_callback = function(results) {
 
@@ -99,12 +99,45 @@
 
           var Size = results[i].StudAll;
           console.log("Roll: ",Size);
-          var Scale = Size/ 50 ;
           var PercentEnrolled = results[i].All_rate;
+          //var Scale = Size/ 50 ;
+          //var Scale = 10 ;
+          var ScaleMin = 3
+          var ScaleMax = 10
+          var SchoolMin = 0
+          var SchoolMax = 2000
+          var ScalePercent = (Size - SchoolMin)/(SchoolMax - Size)
+          var Scale = ScalePercent * (ScaleMax - SchoolMin) + ScaleMax
+          //var Scale =  PercentEnrolled *15;
+          //var Scale =  (100 - PercentEnrolled)/10 ;
+
+          // if (PercentEnrolled >= 0.80){
+          //   // Great schools get green
+          //   console.log("Green school");
+          //   var red = 0;
+          //   var green = 255;
+          //   var blue = 0;
+
+          // }
+          // else if (PercentEnrolled > 0.60) {
+          //   // Medium gets yellow
+          //   console.log("Yellow schools school");
+          //   var red = 255;
+          //   var green = 255;
+          //   var blue = 0;
+
+          // }
+          // else if (PercentEnrolled <= 0.60) {
+          //   // Bad schools get red
+          //   var red = 255;
+          //   var green = 0;
+          //   var blue = 0;
+          // }
           
+          var blue = 0;
           var red = Math.round(255-(PercentEnrolled*255));
           var green = Math.round(PercentEnrolled*255);
-          var rgbString = "rgb("+red.toString()+","+green.toString()+",0)";
+          var rgbString = "rgb("+red.toString()+","+green.toString()+"," + blue.toString() +")";
           var latLng = new google.maps.LatLng(Latitude,Longitude);
           var marker = new google.maps.Marker({
             position: latLng,
