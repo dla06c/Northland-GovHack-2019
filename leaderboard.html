@@ -1,26 +1,28 @@
-<head></head>
-<body>
+<!DOCTYPE html>
+<html>
 
+<head>
+	<title>Leaderboard</title>
+</head>
+
+<body>
 <p id="demo"></p>
 
 <script>
-var myObj, x, txt = "";
-var obj = { table: "placeholder", limit: 20 };
-var dbParam = JSON.stringify(obj);
+var x, txt = "";
 var xmlhttp = new XMLHttpRequest();
+var myObj = JSON.parse(href="Test Data.json");
+
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
-    myObj = JSON.parse(this.responseText);
-    txt += "<table border='1'>"
+    txt += "<table border='1'>";
     for (x in myObj) {
-      txt += "<tr><td>" + myObj[x].School Names + "</td></tr>";
+      txt += "<tr><td>" + myObj[x].Schools.School Names + "</td></tr>";
     }
-    txt += "</table>"    
+    txt += "</table>";   
     document.getElementById("demo").innerHTML = txt;
-  }
+  };
 };
-xmlhttp.open("POST", "Test Data.json", true);
-xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-xmlhttp.send("x=" + dbParam);
 </script>
 </body>
+</html>
