@@ -44,15 +44,15 @@
       console.log("test");
       window.eqfeed_callback = function(results) {
         console.log(results);
-      //   for (var i = 0; i < results.length; i++) {
-      //     var Latitude = results[i].Latitude;
-      //     var Longitude = results[i].Longitude;
-      //     var latLng = new google.maps.LatLng(Latitude,Longitude);
-      //     var marker = new google.maps.Marker({
-      //       position: latLng,
-      //       map: map
-      //     });
-      //   }
+        for (var i = 0; i < results.length; i++) {
+          var Latitude = results[i].Latitude;
+          var Longitude = results[i].Longitude;
+          var latLng = new google.maps.LatLng(Latitude,Longitude);
+          var marker = new google.maps.Marker({
+            position: latLng,
+            map: map
+          });
+        }
       }
       
     </script>
