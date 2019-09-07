@@ -40,7 +40,8 @@
       // Loop through the results array and place a marker for each
       // set of coordinates.
 
-      // window.eqfeed_callback = function(results) {
+      window.eqfeed_callback = function(results) {
+        console.log(results.length)
       //   for (var i = 0; i < results.length; i++) {
       //     var Latitude = results[i].Latitude;
       //     var Longitude = results[i].Longitude;
@@ -50,8 +51,8 @@
       //       map: map
       //     });
       //   }
-      // }
-      console.log(results.length)
+      }
+      
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVh2GtXct2lwsyjmP7ZyZleO4IueULqO4&callback=initMap">
