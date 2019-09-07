@@ -13,7 +13,7 @@ xmlhttp.onreadystatechange = function() {
     myObj = JSON.parse(this.responseText);
     txt += "<table border='1'>"
     for (x in myObj) {
-      txt += "<tr><td>" + myObj[x].name + "</td></tr>";
+      txt += "<tr><td>" + myObj[x].School Names + "</td></tr>";
     }
     txt += "</table>"    
     document.getElementById("demo").innerHTML = txt;
