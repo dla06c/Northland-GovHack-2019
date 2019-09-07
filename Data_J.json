@@ -1,5 +1,5 @@
 eqfeed_callback(
-{
+[
   {
     "School Names": "WBHS",
     "Roll": 1212,
@@ -40,5 +40,5 @@ eqfeed_callback(
     "Longitude": 172,
     "Decile": 3
   }
-}
+]
 )
