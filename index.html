@@ -20,6 +20,8 @@
     <div id="map"></div>
     <script>
       var map;
+      console.log("test")
+
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 2,
@@ -39,7 +41,7 @@
 
       // Loop through the results array and place a marker for each
       // set of coordinates.
-      console.log(script)
+
       window.eqfeed_callback = function(results) {
         console.log(results.length)
       //   for (var i = 0; i < results.length; i++) {
@@ -54,6 +56,9 @@
       }
       
     </script>
+    <script type="text/javascript">
+      
+    </script>>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVh2GtXct2lwsyjmP7ZyZleO4IueULqO4&callback=initMap">
     </script>
