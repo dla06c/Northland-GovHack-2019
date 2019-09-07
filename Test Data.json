@@ -1,5 +1,5 @@
-{ "Schools": 
-  {
+"Schools": {
+   "1": {
     "School Names": "WBHS",
     "Roll": 1212,
     "Enrolled @ Dental Clinics": 506,
@@ -7,7 +7,7 @@
     "Longitude": 174.333,
     "Decile": 5
   },
-  {
+  "2": {
     "School Names": "WGHS",
     "Roll": 1502,
     "Enrolled @ Dental Clinics": 1216,
@@ -15,7 +15,7 @@
     "Longitude": 170,
     "Decile": 5
   },
-  {
+  "3": {
     "School Names": "KHS",
     "Roll": 517,
     "Enrolled @ Dental Clinics": 2530,
@@ -23,7 +23,7 @@
     "Longitude": 174.8,
     "Decile": 4
   },
-  {
+  "4": {
     "School Names": "Huanui",
     "Roll": 308,
     "Enrolled @ Dental Clinics": 5,
@@ -31,7 +31,7 @@
     "Longitude": 174.2,
     "Decile": 9
   },
-  {
+  "5": {
     "School Names": "Tiki",
     "Roll": 2307,
     "Enrolled @ Dental Clinics": 1583,
