@@ -56,7 +56,7 @@
         
       </div>
 
-       <a href="indexExludingPrimary.html" class="btn btn-primary">Exclude Primary schools</a>
+       <a href="index.html" class="btn btn-primary">Include Primary schools</a>
     </div>
     
     <div id="map"></div> 
@@ -126,6 +126,7 @@
           var Size = results[i].StudAll;
           console.log("Roll: ",Size);
           var PercentEnrolled = results[i].All_rate;
+
           //var Scale = Size/ 50 ;
           //var Scale = 10 ;
           var ScaleMin = 3
@@ -147,7 +148,7 @@
           // }
           // else if (PercentEnrolled > 0.60) {
           //   // Medium gets yellow
-          //   console.log("Yellow schools school");
+          //   console.log("Yellow school ");
           //   var red = 255;
           //   var green = 255;
           //   var blue = 0;
@@ -165,7 +166,8 @@
           var green = Math.round(PercentEnrolled*255);
           var rgbString = "rgb("+red.toString()+","+green.toString()+"," + blue.toString() +")";
           var latLng = new google.maps.LatLng(Latitude,Longitude);
-          var marker = new google.maps.Marker({
+          if (Number(results[i].Stud1418) > 0){
+            var marker = new google.maps.Marker({
             position: latLng,
             map: map,
             icon:{
@@ -189,6 +191,11 @@
                 infoWindow.open(map, marker);
               }
           })(marker, i));
+          }
+          
+
+
+          
         }
       }  
       
