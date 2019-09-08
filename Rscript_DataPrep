@@ -1,0 +1,45 @@
+library("reshape2", lib.loc="~/R/win-library/3.5")
+library("tidyr", lib.loc="~/R/win-library/3.5")
+library("xlsx", lib.loc="~/R/win-library/3.5")
+library("stringr", lib.loc="~/R/win-library/3.5")
+library("dbplyr", lib.loc="~/R/win-library/3.5")
+library("tidyverse", lib.loc="~/R/win-library/3.5")
+
+#Reading csv from education counts API which contains all school information and enrollment summary data
+EC_data_All <- read.csv("https://catalogue.data.govt.nz/dataset/2756db90-a096-4ffa-9fb4-73b74ad279d9/resource/bdfe0e4c-1554-4701-a8fe-ba1c8e0cc2ce/download/schooldirectory-06-09-2019-233055.csv")
+
+#reading csv downloaded from Gdocs containing school enrolment data provided as an extract by Northland DHB, csv separated by number of students enrolled by specific age ranges
+DHB_dataAll <- read.csv("C:\\...GovHack\\DHB_Teeth_All.csv")
+DHB_dataU14 <- read.csv("C:\\...\\DHB_Teeth_U14.csv")
+DHB_data1418 <- read.csv("C:\\...\\DHB_Teeth14_18.csv")
+
+#merging education counts school data with 3 age grouping dfs to add dental enrollment counts
+Teeth_data <- merge(EC_data_All, DHB_dataAll, by.x = 'Org_Name', by.y = 'School', all.x=T)
+Teeth_data <- merge(Teeth_data, DHB_dataU14, by.x = 'Org_Name', by.y = 'School', all.x=T )
+Teeth_data <- merge(Teeth_data, DHB_data1418, by.x = 'Org_Name', by.y = 'School', all.x=T)
+
+
+######Creating counts of students by age groupings using machine readable csv from Education Counts, subsetting for the year 2018 and Northland schools removing, charters and punctuations from age field, converting age to numeric
+EC_students <- read.csv("C\\...\\Machine Readable-Roll by Age and Ethnicity 2009-2018.csv") %>% subset (Year..As.at.1.July == '2018' & Region..Regional.Council == 'Northland Region')
+EC_students$Student..Age <- str_remove_all(as.character(EC_students$Student..Age), "Age ") %>% gsub("[[:punct:]]","",.) %>% as.numeric(.)
+
+#Counts for all students by school
+Count_All <- EC_students %>%  subset(Student..Age >4 & Student..Age <19) %>% group_by(School..Name) %>%  summarise(StudAll = sum(ï..Students..â...Values.))
+
+#Counts for 14 to 18 students by school
+Count_1418<- EC_students %>%  subset(Student..Age >13 & Student..Age <19) %>% group_by(School..Name) %>%  summarise(Stud1418 = sum(ï..Students..â...Values.))
+#counts for U14 by school
+Count_U14 <- EC_students %>%  subset(Student..Age > 4 & Student..Age < 14 ) %>% group_by(School..Name) %>%  summarise(StudU14 = sum(ï..Students..â...Values.))
+
+#Merging Field counts into final df
+Final_Data <- merge(Teeth_data,Count_All, by.x = 'Org_Name', by.y = 'School..Name', all.y = T)  
+Final_Data <- merge(Final_Data, Count_U14, by.x = 'Org_Name', by.y = 'School..Name', all.x = T) 
+Final_Data <- merge(Final_Data, Count_1418, by.x = 'Org_Name', by.y = 'School..Name', all.x = T) 
+#creating and calculating new rate and count fields, replacing NA values with Zeros, filtering for subset which removes schools with impossible rates (over 100% enrolled)
+Final_Data <- Final_Data %>% mutate(All_rate = ChildrenAll/StudAll, U14_rate = ChildrenU14/StudU14, S1418_rate = Children1418/Stud1418, All_Diff = StudAll - ChildrenAll, U14_Diff = StudU14 - ChildrenU14, S1418_Diff = Stud1418 - Children1418) 
+Final_Data[is.na(Final_Data)] <- 0 
+Final_Export <- subset(Final_Data,All_rate < 1 & U14_rate <1 & S1418_rate < 1)
+
+#writing subset to csv and xlsx files
+write.csv2(Final_Export, "C:\\...\\NDHB_School_DentaEnrl2.csv")
+write.xlsx(Final_Export,"C:\\...\\NDHB_School_DentaEnrl2.xlsx")
