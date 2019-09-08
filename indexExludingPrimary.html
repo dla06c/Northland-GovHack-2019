@@ -26,7 +26,8 @@
   <body>
 
     <div class="card text-center">
-      <div class="card-header" style="font-size: 30px;">My Smile <p align='right'>
+
+      <div class="card-header" style="font-size: 30px;">Plaque Attack  <p align='right'> </p>
 <!-- <p>
 <a target='_blank' href='https://www.facebook.com/share.php?u=http://mysmile.nz'>
 <img src='https://www.matthewb.id.au/social/facebook.png' alt='Facebook' style="width:20px;height:20px;float: right;"/></a>
@@ -42,19 +43,20 @@
             <a class="nav-link active" href="index.html">School Map</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="table.html">School Info</a>
+            <a class="nav-link" href="table.html">Info Table</a>
           </li>
-        <li class="nav-item">
-          <a class="nav-link" href="stats.html">Statistics</a>
-        </li>
           <li class="nav-item">
             <a class="nav-link" href="links.html">Enroll Now</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dentists.html">Dentists</a>
+          </li>
+
         </ul>
         
       </div>
 
-       <a href="indexExludingPrimary.html" class="btn btn-primary">Exclude Primary schools</a>
+       <a href="index.html" class="btn btn-primary">Include Primary schools</a>
     </div>
     
     <div id="map"></div> 
@@ -124,6 +126,7 @@
           var Size = results[i].StudAll;
           console.log("Roll: ",Size);
           var PercentEnrolled = results[i].All_rate;
+
           //var Scale = Size/ 50 ;
           //var Scale = 10 ;
           var ScaleMin = 3
@@ -145,7 +148,7 @@
           // }
           // else if (PercentEnrolled > 0.60) {
           //   // Medium gets yellow
-          //   console.log("Yellow schools school");
+          //   console.log("Yellow school ");
           //   var red = 255;
           //   var green = 255;
           //   var blue = 0;
@@ -163,7 +166,8 @@
           var green = Math.round(PercentEnrolled*255);
           var rgbString = "rgb("+red.toString()+","+green.toString()+"," + blue.toString() +")";
           var latLng = new google.maps.LatLng(Latitude,Longitude);
-          var marker = new google.maps.Marker({
+          if (Number(results[i].Stud1418) > 0){
+            var marker = new google.maps.Marker({
             position: latLng,
             map: map,
             icon:{
@@ -187,6 +191,11 @@
                 infoWindow.open(map, marker);
               }
           })(marker, i));
+          }
+          
+
+
+          
         }
       }  
       
@@ -206,12 +215,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64669610-14"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    gtag('config', 'UA-64669610-14');
+  gtag('config', 'UA-64669610-14');
 </script>
 
   </body>
